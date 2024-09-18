@@ -12,8 +12,6 @@ export default function Navbar({ logo, searchTerm, setSearchTerm }) {
         intervaId = setInterval(getCurrencies, 30000);
     }, []);
 
-
-
     function getCurrencies() {
         try {
             fetch("https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_vEoVnhnQA7eSIezZ484cr0hbI66EdvPJSqGkUE0j&currencies=EUR%2CUSD%2CGBP&base_currency=TRY")
