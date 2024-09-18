@@ -38,9 +38,9 @@ export default function Navbar({ logo, searchTerm, setSearchTerm }) {
             </div>
             <div className="p-2 d-flex">
                 <div className="d-flex flex-row justify-content-between text-white align-items-center">
-                    <div className="mx-2 currenciesDiv">$ {currencies?.USD ?? '00.00'}</div>
-                    <div className="mx-2 currenciesDiv">£ {currencies?.GBP ?? '00.00'}</div>
-                    <div className="mx-2 currenciesDiv">€ {currencies?.EUR ?? '00.00'}</div>
+                    <div className="mx-2 currenciesDiv">$ {currencies?.USD ?? '00.0000'}</div>
+                    <div className="mx-2 currenciesDiv">£ {currencies?.GBP ?? '00.0000'}</div>
+                    <div className="mx-2 currenciesDiv">€ {currencies?.EUR ?? '00.0000'}</div>
                 </div>
             </div>
             <div className="p-2 d-flex align-items-center">

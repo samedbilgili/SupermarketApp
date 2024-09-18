@@ -51,7 +51,7 @@ export default function ShelfModal({ onAdd, onClose, defaultShelfName, marketId,
                                     disabled
                                 >
                                     <option value="">Seçiniz</option>
-                                    {markets.map((market)=>  <option value={market.id}>{market.name}</option>)}                                   
+                                    {markets.map((market) => <option value={market.id} key={market.id}>{market.name}</option>)}
                                 </select>
                             </div>
                         </form>
