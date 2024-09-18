@@ -3,13 +3,12 @@ import { useEffect, useState } from "react";
 
 
 export default function Navbar({ logo, searchTerm, setSearchTerm }) {
-    let intervaId;
-
     const [currencies, setCurrencies] = useState({});
 
     useEffect(() => {
         getCurrencies();
-        intervaId = setInterval(getCurrencies, 30000);
+        const intervaId = setInterval(getCurrencies, 30000);
+        return () => clearInterval(intervaId);
     }, []);
 
     function getCurrencies() {
