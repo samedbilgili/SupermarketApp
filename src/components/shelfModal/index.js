@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { shelfTypes } from '../../MockData';
 
-export default function ShelfModal({ onAdd, onClose, defaultShelfName, marketId }) {
+export default function ShelfModal({ onAdd, onClose, defaultShelfName, marketId, markets }) {
 
     const [shelfName, setShelfName] = useState(defaultShelfName);
     const [shelfType, setShelfType] = useState("");
@@ -51,8 +51,7 @@ export default function ShelfModal({ onAdd, onClose, defaultShelfName, marketId 
                                     disabled
                                 >
                                     <option value="">Seçiniz</option>
-                                    <option value="market-a">Market A</option>
-                                    <option value="market-b">Market B</option>
+                                    {markets.map((market)=>  <option value={market.id}>{market.name}</option>)}                                   
                                 </select>
                             </div>
                         </form>

@@ -128,7 +128,7 @@ function App() {
 
     if (editedProduct.moveMarketId != editedProduct.marketId || editedProduct.moveShelfId != editedProduct.shelfId) {
       handleDeleteProduct(editedProduct.id);
-      handleAddProductSubmit({id: editedProduct.id, name: editedProduct.name, shelfId: editedProduct.moveShelfId, marketId: editedProduct.moveMarketId});
+      handleAddProductSubmit({ id: editedProduct.id, name: editedProduct.name, shelfId: editedProduct.moveShelfId, marketId: editedProduct.moveMarketId });
     }
 
     setMarkets((prevMarkets) => {
@@ -231,6 +231,7 @@ function App() {
           onClose={() => setIsAddingShelf(false)}
           defaultShelfName={`R${markets.find((m) => m.id == addingShelfMarketId).shelves.length + 1}`}
           marketId={addingShelfMarketId}
+          markets={markets}
         />
       )}
 

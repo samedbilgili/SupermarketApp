@@ -8,7 +8,6 @@ export default function Navbar({ logo, searchTerm, setSearchTerm }) {
     const [currencies, setCurrencies] = useState({});
 
     useEffect(() => {
-
         getCurrencies();
         intervaId = setInterval(getCurrencies, 30000);
     }, []);
