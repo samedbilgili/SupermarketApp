@@ -5,7 +5,7 @@ const deleteIcon = <FontAwesomeIcon icon={faTrash} />
 
 export default function Market({ market, handleAddProduct, handleAddShelf, onEditProduct, handleDeleteShelf }) {
     return <>
-        <div className="col-md-6 p-3">
+        <div className="col-md-6 col-12 p-3">
             <div className="col-md-12 d-flex align-items-center justify-content-center market-header">
                 <p className="m-0 p-3">
                     {market.name}

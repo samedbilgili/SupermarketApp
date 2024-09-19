@@ -193,7 +193,7 @@ function App() {
     <>
       <Navbar logo={logo} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      <div className='d-flex'>
+      <div className='d-flex flex-wrap'>
         {filteredMarkets.map((market) =>
           <Market
             key={market.id}
